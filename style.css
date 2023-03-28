@@ -1,0 +1,24 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.sidemenu {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: #1992D4;
+}
+
+.header {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+}
+
+.main {
+    grid-column: 2 / -1;
+    grid-row: 2 / -1;
+    background-color: #E2E8F0;
+}
+
