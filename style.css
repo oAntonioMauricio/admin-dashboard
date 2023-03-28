@@ -1,5 +1,5 @@
 .container {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 4fr;
@@ -8,7 +8,14 @@
 .sidemenu {
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+
+    padding: 20px;
     background-color: #1992D4;
+    font-family: 'Roboto', sans-serif;
+
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    gap: 50px;
 }
 
 .header {
@@ -20,5 +27,60 @@
     grid-column: 2 / -1;
     grid-row: 2 / -1;
     background-color: #E2E8F0;
+}
+
+/* Sidebar css */
+.logo {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+}
+
+.logo > p {
+    margin: 0;
+}
+
+.logo > svg {
+    justify-self: center;
+}
+
+.icons {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
+
+    color: white;
+    font-weight: bold;
+}
+
+.icon {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+    align-items: center;
+
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.icon:hover {
+    background-color: #1374a9;
+    cursor: pointer;
+}
+
+.icon > p {
+    margin: 0;
+}
+
+.icon > svg {
+    justify-self: center;
+    width: 24px;
+    height: 24px;
+    fill: white;
 }
 
