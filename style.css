@@ -2,7 +2,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: min-content 3fr;
 }
 
 .sidemenu {
@@ -88,7 +88,7 @@
 .header {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    padding: 20px;
+    padding: 20px 40px;
 
     font-family: 'Roboto', sans-serif;
 }
@@ -107,7 +107,6 @@
 }
 
 .search {
-    border: 2px solid green;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -122,8 +121,6 @@
 }
 
 .profile {
-    border: 2px solid red;
-
     display: flex;
     justify-content: end;
     align-items: center;
@@ -145,14 +142,11 @@
 .header-welcome {
     display: grid;
     grid-template-columns: minmax(200px, 2fr) 1fr;
-
-    border: 2px solid black;
 }
 
 .welcome-hello {
-    border: 2px solid purple;
-
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
@@ -161,15 +155,24 @@
 }
 
 .hello-img {
-    height: 100%;
-    width: 10%;
-    background-color: green;
+    height: 4rem;
+    width: 4rem;
+    aspect-ratio: auto;
+    border-radius: 9999px;
 }
 
 .hello-flex {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.hello-flex>p {
+    font-weight: bold;
+}
+
+.hello-flex>p:nth-child(2) {
+    font-size: 1.5rem;
 }
 
 .welcome-buttons {
@@ -189,3 +192,10 @@
     font-weight: 500;
     font-size: 0.9rem;
 }
+
+.welcome-buttons>button:hover {
+    background-color: #167fb7;
+    cursor: pointer;
+}
+
+/* Main CSS */
