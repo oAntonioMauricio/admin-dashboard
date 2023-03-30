@@ -2,7 +2,7 @@
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: min-content 3fr;
+    grid-template-rows: min-content 1fr;
 }
 
 .sidemenu {
@@ -164,10 +164,10 @@
 .hello-flex {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 4px;
 }
 
-.hello-flex>p {
+.hello-flex>p:nth-child(2) {
     font-weight: bold;
 }
 
@@ -199,3 +199,58 @@
 }
 
 /* Main CSS */
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 40px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-projects {
+    border: 2px solid red;
+    width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    flex-grow: 3;
+}
+
+.main-projects > p {
+    margin: 0;
+}
+
+.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.pjcard {
+    border: 2px solid blue;
+    height: 200px;
+}
+
+.main-side {
+    border: 2px solid green;
+    flex-grow: 1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+}
+
+.announcements,
+.trending {
+    width: 100%;
+    height: 100%;
+
+    border: 2px solid pink;
+}
+
+.announcements > p,
+.trending > p {
+    margin: 0;
+}
