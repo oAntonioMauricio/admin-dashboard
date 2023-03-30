@@ -200,26 +200,27 @@
 
 /* Main CSS */
 .main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-auto-flow: row;
+    
+    gap: 40px;
     padding: 20px 40px;
 
     font-family: 'Roboto', sans-serif;
 }
 
-.main-projects {
-    border: 2px solid red;
-    width: 700px;
+.main p {
+    color: #6E6E6E;
+}
 
+.main-projects {
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    flex-grow: 2;
 }
 
-.main-projects > p {
+.main-projects > h3 {
     margin: 0;
 }
 
@@ -233,7 +234,7 @@
     background-color: white;
     height: 200px;
     border-radius: 12px;
-    border-left: 8px solid #D4A286;
+    border-left: 8px solid #F0B429;
     padding: 20px;
 
     display: flex;
@@ -253,15 +254,20 @@
 }
 
 .main-side {
-    border: 2px solid green;
-    flex-grow: 1;
-
     gap: 40px;
     min-width: 300px;
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content;
+}
+
+.announcements h3 {
+    margin: 0;
+}
+
+.trending h3 {
+    margin: 0;
 }
 
 .announcements,
@@ -272,13 +278,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    border: 2px solid pink;
-}
-
-.announcements > p,
-.trending > p {
-    margin: 0;
 }
 
 .side-bg {
@@ -286,9 +285,42 @@
     width: auto;
     height: 100%;
     border-radius: 12px;
+    padding: 20px;
 }
 
 .side-ann {
     display: flex;
     flex-direction: column;
+}
+
+.ann-card:nth-child(-n+2) {
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.side-trend {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.trend-cnt {
+    display: grid;
+    grid-template-columns: min-content 3fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.trend-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.trend-text p {
+    margin: 0;
+}
+
+.trend-text p:nth-child(1) {
+    color: black;
 }
