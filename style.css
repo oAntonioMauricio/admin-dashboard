@@ -210,13 +210,13 @@
 
 .main-projects {
     border: 2px solid red;
-    width: 900px;
+    width: 700px;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
 
-    flex-grow: 3;
+    flex-grow: 2;
 }
 
 .main-projects > p {
@@ -225,27 +225,53 @@
 
 .projects-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 40px;
 }
 
 .pjcard {
-    border: 2px solid blue;
+    background-color: white;
     height: 200px;
+    border-radius: 12px;
+    border-left: 8px solid #D4A286;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.card-icons svg {
+    width: 24px;
+    height: 24px;
 }
 
 .main-side {
     border: 2px solid green;
     flex-grow: 1;
 
+    gap: 40px;
+    min-width: 300px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
 }
 
 .announcements,
 .trending {
     width: 100%;
-    height: 100%;
+    height: min-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     border: 2px solid pink;
 }
@@ -253,4 +279,16 @@
 .announcements > p,
 .trending > p {
     margin: 0;
+}
+
+.side-bg {
+    background-color: white;
+    width: auto;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.side-ann {
+    display: flex;
+    flex-direction: column;
 }
