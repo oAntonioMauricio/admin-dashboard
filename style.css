@@ -1,7 +1,7 @@
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: min-content 5fr;
     grid-template-rows: min-content 1fr;
 }
 
@@ -9,13 +9,13 @@
     grid-column: 1 / 2;
     grid-row: 1 / -1;
 
-    padding: 20px;
+    padding: 30px;
     background-color: #1992D4;
     font-family: 'Roboto', sans-serif;
 
     display: grid;
     grid-template-rows: repeat(3, min-content);
-    gap: 50px;
+    gap: 40px;
 }
 
 .header {
@@ -33,7 +33,7 @@
 .logo {
     display: grid;
     grid-template-columns: 48px 1fr;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
 
     font-weight: bold;
@@ -60,7 +60,7 @@
 
 .icon {
     display: grid;
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: min-content 1fr;
     gap: 15px;
     align-items: center;
 
@@ -78,7 +78,7 @@
 }
 
 .icon>svg {
-    justify-self: center;
+    justify-self: start;
     width: 24px;
     height: 24px;
     fill: white;
@@ -118,6 +118,12 @@
     border-radius: 12px;
     width: 70%;
     height: 35%;
+    padding-left: 10px;
+}
+
+.search>input:focus {
+    border: 3px solid #1992D4;
+    outline-width: 0;
 }
 
 .profile {
